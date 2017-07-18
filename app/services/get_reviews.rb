@@ -1,6 +1,5 @@
 class Review
   def self.get_reviews
-    response = HTTParty.get('http://localhost:3000/reviews')
-    response
+    response = JSON.parse(HTTParty.get('http://localhost:3000/reviews').body)
   end
 end
